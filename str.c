@@ -5,7 +5,7 @@
 ** Login   <baptiste@epitech.net>
 **
 ** Started on  Wed Jun 29 10:04:20 2016
-** Last update Fri Jul  1 10:11:31 2016 
+** Last update Fri Jul  1 10:18:42 2016 
 */
 
 #include "data.h"
@@ -68,4 +68,54 @@ int	replace_no_char(char *str)
 	str[i] = ' ';
     }
   return (1);
+}
+
+int     count_tab(char **tab)
+{
+  int   i = -1;
+
+  if (tab == NULL)
+    return (0);
+  while (tab[++i] != NULL);
+  return (i);
+}
+
+char    **alloc(char **re_write, char *name)
+{
+  int   i;
+  char  **tmp;
+
+  i = -1;
+  if (re_write == NULL)
+    {
+      if ((tmp = malloc(sizeof(char *) * 2)) == NULL)
+	return (NULL);
+      tmp[0] = my_strdup(name);
+      tmp[1] = NULL;
+    }
+  else
+    {
+      if ((tmp = malloc(sizeof(char *) *
+			(count_tab(re_write) + 2))) == NULL)
+	return (NULL);
+      while (re_write[++i] != NULL)
+	tmp[i] = re_write[i];
+      tmp[i] = my_strdup(name);
+      tmp[i + 1] = NULL;
+    }
+  return (tmp);
+}
+
+char    *my_strdup(char *src)
+{
+  char  *str;
+  int   lenght;
+
+  if (src == NULL)
+    return (NULL);
+  lenght = strlen(src) + 1;
+  if ((str = malloc(sizeof(char) * lenght)) == NULL)
+    return (NULL);
+  strcpy(str, src);
+  return (str);
 }

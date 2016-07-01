@@ -5,24 +5,30 @@
 ** Login   <baptiste@epitech.net>
 **
 ** Started on  Fri Jul  1 09:23:45 2016
-** Last update Fri Jul  1 10:15:00 2016 
+** Last update Fri Jul  1 10:26:46 2016 
 */
 
 #include "data.h"
 
-int	crypt(char *str)
+int	decrypt(char *str)
 {
   int	i = 0;
+  char	**tmp = NULL;
+  char	*pur;
 
   while (++i < 26)
     {
       decal(str);
-      printf("[+%d] %s\n", i, str);
+      replace_no_char(str);
+      pur = epur_str(str);
+      tmp = alloc(tmp , pur);
+      free(pur);
     }
+  display_tab(tmp);
   return (1);
 }
 
-int     decrypt(char *str)
+int     crypt(char *str)
 {
   int   i = 0;
   char	*tmp;
