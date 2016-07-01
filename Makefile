@@ -1,7 +1,8 @@
 NAME	=	caesar 
 
 SRC	=	main.c \
-		display.c 
+		display.c \
+		function.c
 
 INC_DIR	=	include
 
