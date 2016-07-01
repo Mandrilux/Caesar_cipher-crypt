@@ -5,7 +5,7 @@
 ** Login   <baptiste@epitech.net>
 **
 ** Started on  Wed Jun 29 10:04:20 2016
-** Last update Fri Jul  1 10:18:42 2016 
+** Last update Fri Jul  1 10:33:26 2016 
 */
 
 #include "data.h"
@@ -99,10 +99,11 @@ char    **alloc(char **re_write, char *name)
 			(count_tab(re_write) + 2))) == NULL)
 	return (NULL);
       while (re_write[++i] != NULL)
-	tmp[i] = re_write[i];
+	tmp[i] = my_strdup(re_write[i]);
       tmp[i] = my_strdup(name);
       tmp[i + 1] = NULL;
     }
+  free_tab(re_write);
   return (tmp);
 }
 

@@ -3,8 +3,8 @@ NAME	=	caesar
 SRC	=	main.c \
 		display.c \
 		function.c \
-		str.c 
-
+		str.c \
+		free.c
 INC_DIR	=	include
 
 OBJ	=	$(SRC:.c=.o)
