@@ -10,6 +10,7 @@
 
 int		 crypt(char *str);
 int		 decrypt(char *str);
+int		 decal(char *str);
 int		 is_correct_param(char *str);
 
 		/* display.c */
