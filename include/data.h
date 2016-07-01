@@ -13,10 +13,21 @@
 
 char		 *my_strdup(char *src);
 
+
+
+
+
+
+char		 *my_strdup(char *src);
+
+		/* free.c */
+
+int		 free_tab(char **tab);
+
 		/* function.c */
 
-int		 crypt(char *str);
 int		 decrypt(char *str);
+int		 crypt(char *str);
 int		 is_correct_param(char *str);
 
 		/* display.c */
