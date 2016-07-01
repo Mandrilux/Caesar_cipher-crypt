@@ -5,7 +5,7 @@
 ** Login   <baptiste@epitech.net>
 **
 ** Started on  Fri Jul  1 09:23:45 2016
-** Last update Fri Jul  1 09:27:21 2016 
+** Last update Fri Jul  1 09:31:23 2016 
 */
 
 #include "data.h"
@@ -25,9 +25,9 @@ int     decrypt(char *str)
 int	is_correct_param(char *str)
 {
   if (strlen(str) != 1)
-    return (-1);
+    return (printf("[%s] Invalid parameter \n", str));
   if (str[0] == '1' || str[0] == '0')
     return (1);
   else
-    return (-1);
+    return (printf("%s Invalid parameter \n", str));
 }
