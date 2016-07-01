@@ -5,7 +5,7 @@
 ** Login   <baptiste@epitech.net>
 **
 ** Started on  Fri Jul  1 09:23:45 2016
-** Last update Fri Jul  1 09:34:22 2016 
+** Last update Fri Jul  1 09:35:57 2016 
 */
 
 #include "data.h"
@@ -31,5 +31,5 @@ int	is_correct_param(char *str)
   if (str[0] == '1' || str[0] == '0')
     return (1);
   else
-    return (printf("%s Invalid parameter \n", str));
+    return (printf("[%s] Invalid parameter \n", str));
 }
