@@ -5,7 +5,7 @@
 ** Login   <baptiste@epitech.net>
 **
 ** Started on  Fri Jul  1 09:23:45 2016
-** Last update Fri Jul  1 10:02:20 2016 
+** Last update Fri Jul  1 10:15:00 2016 
 */
 
 #include "data.h"
@@ -25,11 +25,18 @@ int	crypt(char *str)
 int     decrypt(char *str)
 {
   int   i = 0;
+  char	*tmp;
 
   while (++i < 26)
     {
       decal(str);
-      printf("[+%d] %s\n", i, str);
+      replace_no_char(str);
+      tmp = epur_str(str);
+      if (i < 10)
+	printf("[+%d]  %s\n", i, tmp);
+      else
+	printf("[+%d] %s\n", i, tmp);
+      free(tmp);
     }
   return (1);
 }

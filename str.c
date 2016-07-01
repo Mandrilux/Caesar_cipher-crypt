@@ -5,7 +5,7 @@
 ** Login   <baptiste@epitech.net>
 **
 ** Started on  Wed Jun 29 10:04:20 2016
-** Last update Fri Jul  1 10:02:14 2016 
+** Last update Fri Jul  1 10:11:31 2016 
 */
 
 #include "data.h"
@@ -53,6 +53,19 @@ int     decal(char *str)
 	  else
 	    str[i] += 1;
 	}
+    }
+  return (1);
+}
+
+int	replace_no_char(char *str)
+{
+  int	i = -1;
+
+  while (str[++i] != '\0')
+    {
+      if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'));
+      else
+	str[i] = ' ';
     }
   return (1);
 }
