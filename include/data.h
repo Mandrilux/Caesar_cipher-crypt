@@ -4,6 +4,13 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
+
+		/* function.c */
+
+int		 crypt(char *str);
+int		 decrypt(char *str);
+int		 is_correct_param(char *str);
 
 		/* display.c */
 
