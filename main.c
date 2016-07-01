@@ -4,7 +4,7 @@ int	main(int ac, char **av)
 {
   int	nb;
 
-  if (ac != 3)
+  if (ac != 3 && ac != 4)
     return (display_usage(av[0]));
   if (is_correct_param(av[2]) != 1)
     return (display_usage(av[0]));
