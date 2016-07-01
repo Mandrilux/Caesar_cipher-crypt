@@ -5,7 +5,7 @@
 ** Login   <baptiste@epitech.net>
 **
 ** Started on  Fri Jul  1 09:23:45 2016
-** Last update Fri Jul  1 09:31:23 2016 
+** Last update Fri Jul  1 09:34:22 2016 
 */
 
 #include "data.h"
@@ -13,12 +13,14 @@
 int	crypt(char *str)
 {
   (void) str;
+  printf("on crypt\n");
   return (1);
 }
 
 int     decrypt(char *str)
 {
   (void)str;
+  printf("on decrypt\n");
   return (1);
 }
 
