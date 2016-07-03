@@ -5,7 +5,7 @@
 ** Login   <baptiste@epitech.net>
 **
 ** Started on  Wed Jun 29 10:04:20 2016
-** Last update Fri Jul  1 10:33:26 2016 
+** Last update Sun Jul  3 14:58:37 2016 
 */
 
 #include "data.h"
@@ -119,4 +119,16 @@ char    *my_strdup(char *src)
     return (NULL);
   strcpy(str, src);
   return (str);
+}
+
+int	init_key(char *str)
+{
+  int	key;
+
+  if ((key = atoi(str)) == 0)
+    {
+      printf("ERROR : KEY INVALID\n");
+      return (-1);
+    }
+  return (key % 26);
 }

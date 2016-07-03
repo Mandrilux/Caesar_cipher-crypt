@@ -20,6 +20,15 @@ char		 *my_strdup(char *src);
 
 char		 *my_strdup(char *src);
 
+
+
+
+
+
+
+
+char		 *my_strdup(char *src);
+
 		/* free.c */
 
 int		 free_tab(char **tab);
@@ -43,6 +52,7 @@ int		 replace_no_char(char *str);
 int		 count_tab(char **tab);
 char		 **alloc(char **re_write, char *name);
 char		 *my_strdup(char *src);
+int		 init_key(char *str);
 
 		/* main.c */
 
